@@ -19,7 +19,9 @@ pnpm dev:web                # http://localhost:5173
 | --- | --- |
 | `pnpm build` | Compile tous les paquets |
 | `pnpm typecheck` | Vérification TypeScript |
-| `pnpm test` | Tests (vitest) |
+| `pnpm test` | Tests unitaires (vitest) |
+| `pnpm test:integration` | Tests contre PostgreSQL et Redis réels (`DATABASE_URL`, `REDIS_URL`) |
+| `pnpm verify:docker` | Vérification complète de la stack Docker (démon requis) |
 | `docker compose --profile app up --build` | Stack complète en conteneurs |
 
-Documentation : [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · [docs/SETUP.md](docs/SETUP.md)
+Documentation : [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) · [docs/SETUP.md](docs/SETUP.md) · [docs/VALIDATION.md](docs/VALIDATION.md)

@@ -7,6 +7,8 @@ the-ai-council/
 │   └── web/        React 19 + Vite, proxy /api → :3001
 ├── packages/
 │   └── shared/     Types et constantes partagés (PROVIDERS, HealthStatus)
+├── scripts/verify-docker.sh   Vérification reproductible de la stack Docker
+├── .github/workflows/ci.yml   CI : typecheck, build, tests, intégration, Docker
 ├── docker-compose.yml
 ├── tsconfig.base.json
 └── .env.example

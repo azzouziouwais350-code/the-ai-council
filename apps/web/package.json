@@ -8,7 +8,11 @@
     "build": "tsc -p tsconfig.json --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "predev": "pnpm --filter @council/shared build",
+    "pretest": "pnpm --filter @council/shared build",
+    "pretypecheck": "pnpm --filter @council/shared build",
+    "prebuild": "pnpm --filter @council/shared build"
   },
   "dependencies": {
     "@council/shared": "workspace:*",
@@ -22,6 +26,8 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
     "jsdom": "^31.0.0",
-    "vite": "^8.3.8"
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
   }
 }

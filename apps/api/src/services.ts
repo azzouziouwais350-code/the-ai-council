@@ -10,6 +10,9 @@ export interface Services {
 
 export function createServices(config: Config): Services {
   const pool = new pg.Pool({ connectionString: config.DATABASE_URL, max: 10 });
+  pool.on("error", () => {
+    /* erreurs de clients inactifs : ne doivent pas faire tomber le process */
+  });
   const redis = new Redis(config.REDIS_URL, {
     lazyConnect: true,
     maxRetriesPerRequest: 1,

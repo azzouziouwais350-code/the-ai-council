@@ -6,7 +6,7 @@ COPY packages/shared packages/shared
 COPY apps/api apps/api
 RUN pnpm install --frozen-lockfile --filter @council/api...
 RUN pnpm --filter @council/shared build && pnpm --filter @council/api build
-RUN pnpm --filter @council/api deploy --prod /out
+RUN pnpm --filter @council/api deploy --legacy --prod /out
 
 FROM node:22-alpine
 ENV NODE_ENV=production
