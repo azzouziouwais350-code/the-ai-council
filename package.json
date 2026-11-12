@@ -1,0 +1,24 @@
+{
+  "name": "the-ai-council",
+  "version": "2.0.0",
+  "private": true,
+  "description": "THE AI COUNCIL V2.0 — monorepo (web + desktop)",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev:web": "pnpm --filter @council/web dev",
+    "dev:api": "pnpm --filter @council/api dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "docker:up": "docker compose up -d postgres redis",
+    "docker:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}
